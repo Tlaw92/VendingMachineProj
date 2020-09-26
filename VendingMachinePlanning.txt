@@ -1,0 +1,37 @@
+differences between Value types and reference types in c#
+
+stacks hold the actual values with te variables reference types hold arros an copy values 
+
+
+data structures in c#
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+Soda Machine GAMEPLAN
+
+
+
+
+1. Ask user for input regarding which selection they would like to choose.
+
+2. Once they make a selection, They have to enter the correct ammount to pay.
+
+	2.a - if they pay too much then they need to get change back.
+	2.b - if they dont pay enough don't depense desired item AND
+	      ask for more correct ammount.
+
+             Ill definitely have to figure out how to account for bad user input. 
+	     Maybe like If userInput != <list>
+	     Console.WriteLine("invalid Entry");
+
+  
+3. Once the correct amount has been paid display to the concole that they 
+   have recieved their item.
+
+4. Start the program over.
+
+
+This method does One of two things, If the DepositedAmount
+
+
+I want 
