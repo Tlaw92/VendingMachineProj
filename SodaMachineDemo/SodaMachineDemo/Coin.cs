@@ -11,11 +11,9 @@ namespace SodaMachineDemo
     class Coin
     {
         //Member Variables (Has a)
-        protected double value;
+        protected int value;
         public string name;
-
-        //Constructors (initial values)
-        public double Value
+        public int Value
         {
             get
             {

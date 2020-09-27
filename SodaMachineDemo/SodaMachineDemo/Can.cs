@@ -9,20 +9,13 @@ namespace SodaMachineDemo
     abstract class Can
     {
         //Member Variables
-        protected double cost;
+        protected int cost;
+        public int Cost { get { return cost; } }
         public string name;
 
-        //Constructors (initial values)
-        public double Cost
-        {
-            get
-            {
-                return cost;
-
-            }
-        }
-
-        //Member Methods (Can Do)
 
     }
+
+        //Member Methods (Can Do)
+        
 }

@@ -14,7 +14,7 @@ namespace SodaMachineDemo
         public OrangeSoda()
         {
             name = "Orange Soda";
-            cost = .06;
+            cost = 6;
         }
 
         //Member Methods (Can Do)

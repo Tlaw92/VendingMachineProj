@@ -15,7 +15,7 @@ namespace SodaMachineDemo
     {
 
         //Member Variables (Has A)
-        const int CostOfDrink = 100;
+        const int CostOfDrink = 100; //CostOfDrink = userinput.Cost
         public int RunningTotal { get; set; }
 
         public double correctChange;
@@ -29,91 +29,22 @@ namespace SodaMachineDemo
 
         //Member Methods (Can Do)
 
-        public void DepositCoin(int money)
-        {
-            //the only valid entries are 5, 10, 25, 100
-            switch (money)
-            {
-                case (5):
-                    RunningTotal += 5;
-                    break;
-                case (10):
-                    RunningTotal += 10;
-                    break;
-                case (25):
-                    RunningTotal += 25;
-                    break;
-                case (100):
-                    RunningTotal += 100;
-                    break;
-                default:
-                    Console.WriteLine("Invalid Entry");
-                    break;
-            }
 
-
-        }
         //I need a method that tells the user that they havent input enough money and also show how much they have inserted
 
         public bool CheckTotal()
         {
             if (RunningTotal >= CostOfDrink)
-                return true;
-            else
-                return false;
-        }
-
-        public void DisplayDrinkSelections()
-        {
-            Console.WriteLine("Here are your options to choose from:" + "\n");
-            Console.WriteLine("**************************");
-            Console.WriteLine("*                        *");
-            Console.WriteLine("* type C for Cola        *");
-            Console.WriteLine("* Type R for Root Beer   *");
-            Console.WriteLine("* Type O for Orange Soda *");
-            Console.WriteLine("*                        *");
-            Console.WriteLine("**************************");
-            Console.WriteLine();
-            Console.WriteLine("Please make your selection:");
-            MakeDrinkSelection(Convert.ToChar(Console.ReadLine().ToUpper()));
-
-        }
-
-        private void MakeDrinkSelection(char selection)
-        {
-            bool selectionOK = false;
-            while (!selectionOK)
             {
-                switch (selection)
-                {
-                    case 'C':
-                        Console.WriteLine("Thank you for choosing Cola");
-                        selectionOK = true;
-                        ReturnChange();
-                        break;
-
-                    case 'R':
-                        Console.WriteLine("Thank you for choosing Root Beer");
-                        selectionOK = true;
-                        ReturnChange();
-                        break;
-
-                    case 'O':
-                        Console.WriteLine("Thank you for choosing Orange Soda");
-                        selectionOK = true;
-                        ReturnChange();
-                        break;
-
-                    default:
-                        Console.WriteLine("Invalid Selection. Please try again:");
-                        selection = (Convert.ToChar(Console.ReadLine().ToUpper()));
-                        selectionOK = false;
-                        break;
-                }
+                return true;
             }
+            return false;
+               
         }
 
-        private void ReturnChange()
+        
+
+        public void ReturnChange()
         {
             if (RunningTotal > CostOfDrink)
                 Console.WriteLine($"Your change is {correctChange}");
