@@ -8,10 +8,16 @@ namespace SodaMachineDemo
 {
     class Cola : Can
     {
+        //Member VAriables
+
+        //Constructors (initial values)
         public Cola()
         {
             name = "Cola";
             cost = .35;
         }
+
+        //Member Methods (Can Do)
+
     }
 }

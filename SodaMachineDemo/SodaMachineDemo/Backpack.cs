@@ -7,12 +7,19 @@ using System.Threading.Tasks;
 namespace SodaMachineDemo
 {
     class Backpack
-    {
-        List<Can> backpack;
+    { 
+        // I want to keep track of cans in a Backpack class
+        // Backpack should start empty
+        
+        //Member Variables (Has A)
+        List<Can> cansList;
 
+        //Constructors (initial values)
         public Backpack()
         {
-            backpack = new List<Can>();
+            cansList = new List<Can>();
         }
+
+        //Member Methods (Can Do)
     }
 }

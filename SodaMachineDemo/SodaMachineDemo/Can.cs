@@ -8,8 +8,11 @@ namespace SodaMachineDemo
 {
     abstract class Can
     {
+        //Member Variables
         protected double cost;
         public string name;
+
+        //Constructors (initial values)
         public double Cost
         {
             get
@@ -18,5 +21,8 @@ namespace SodaMachineDemo
 
             }
         }
+
+        //Member Methods (Can Do)
+
     }
 }

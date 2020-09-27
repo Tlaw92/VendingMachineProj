@@ -9,10 +9,17 @@ namespace SodaMachineDemo
 {
     class Quarter : Coin
     {
+        //Member Variable (Has A)
+
+        //Constructors (initial values)
+
         public Quarter()
         {
             name = "Quarter";
             value = .25;
         }
+
+        //Member Variables (Can Do)
+
     }
 }
