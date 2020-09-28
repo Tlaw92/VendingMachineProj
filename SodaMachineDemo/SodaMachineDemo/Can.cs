@@ -9,8 +9,13 @@ namespace SodaMachineDemo
     abstract class Can
     {
         //Member Variables
-        protected int cost;
-        public int Cost { get { return cost; } }
+        protected double cost;
+        public double Cost { 
+            get 
+            {
+                return cost; 
+            } 
+        }
         public string name;
 
 

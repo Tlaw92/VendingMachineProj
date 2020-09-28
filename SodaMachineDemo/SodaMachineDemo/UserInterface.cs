@@ -14,39 +14,41 @@ namespace SodaMachineDemo
     static class UserInterface
     {
         //Member Variables (Has a)
-        public static List<string> sodaList;
-        public static string userInput;
+        //public static List<string> sodaList;
+        //public static string userInput;
 
 
 
         //Member Methods (Can do)
         public static void Greeting()
         {
-            Console.WriteLine("Hello customer! Insert 100 cents to buy a Pop\n");
+            Console.WriteLine("Hello customer! Insert 35 cents for a Cola, 60  cents for a Root Beer, or 6 cents for an Orange Soda\n");
             Console.WriteLine("Type 25 to insert a quarter, type 10 to insert dimes, type 5 to insert nickles, and type 1 to insert pennies");
             
         }
 
         
 
-        public static void DisplayMenu1()
+        public static string DisplayMenu1()
         {
             Console.WriteLine(
                 "Type A1 for Cola\n" +
                 "Type B1 for Root Beer\n" +
                 "Type C1 for Orange Soda");
+
+            return Console.ReadLine();
             
         }
 
-        public static void ChosenSodaA1()
+        public static void ChosenSodaGestureA1()
         {
             Console.WriteLine("Thank you for choosing Cola");
         }
-        public static void ChosenSodaB1()
+        public static void ChosenSodaGestureB1()
         {
             Console.WriteLine("Thank you for choosing Root Beer");
         }
-        public static void ChosenSodaC1()
+        public static void ChosenSodaGestureC1()
         {
             Console.WriteLine("Thank you for choosing Orange Soda");
         }
@@ -70,5 +72,10 @@ namespace SodaMachineDemo
             Console.WriteLine("Invalid Selection. Please try again:");
         }
 
+        public static void SodaChosen()
+        {
+
+        }
     }
+   
 }

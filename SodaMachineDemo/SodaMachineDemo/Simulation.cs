@@ -34,21 +34,13 @@ namespace SodaMachineDemo
                 int userInput = Convert.ToInt32(Console.ReadLine());
                 DepositCoin(userInput);
             }
-            UserInterface.DisplayMenu1();
-            userInput = Console.ReadLine();
+            userInput = UserInterface.DisplayMenu1();
+            
             MakeDrinkSelection(userInput);
-            sodaMachine.ChangeCalculator();
+            double change = sodaMachine.ChangeCalculator();
             sodaMachine.ReturnChange();
             
 
-            //SodaMachine sodaMachine = new SodaMachine();
-
-            //while (!sodaMachine.CheckTotal())
-            //{
-            //    Console.WriteLine("All soda costs 1 dollar" + "\n" + "Please enter coin amount or a dollar bill amount (5, 10, 25, 100)");
-            //    sodaMachine.DepositCoin(Convert.ToInt32(Console.ReadLine()));
-            //}
-            //sodaMachine.DisplayDrinkSelections();
 
             Console.ReadLine();
         }
@@ -61,19 +53,19 @@ namespace SodaMachineDemo
                 switch (selection)
                 {
                     case "A1":
-                        UserInterface.ChosenSodaA1();
+                        UserInterface.ChosenSodaGestureA1();
                         selectionOK = true;
                         sodaMachine.ReturnChange();
                         break;
 
                     case "B1":
-                        UserInterface.ChosenSodaB1();
+                        UserInterface.ChosenSodaGestureB1();
                         selectionOK = true;
                         sodaMachine.ReturnChange();
                         break;
 
                     case "C1":
-                        UserInterface.ChosenSodaC1();
+                        UserInterface.ChosenSodaGestureC1();
                         selectionOK = true;
                         sodaMachine.ReturnChange();
                         break;

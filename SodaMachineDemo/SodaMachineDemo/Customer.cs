@@ -40,6 +40,6 @@ namespace SodaMachineDemo
         }
 
         //Member Methods (Can do)
-
+       
     }
 }

@@ -17,14 +17,18 @@ namespace SodaMachineDemo
         //Member Variables (Has A)
         const int CostOfDrink = 100; //CostOfDrink = userinput.Cost
         public int RunningTotal { get; set; }
-
+        List<Coin> register;
+        List<Can> inventory;
         public double correctChange;
+
 
         //Constructor (Initial Value)
         public SodaMachine()
         {
+            register = new List<Coin>();
             RunningTotal = 0;
             correctChange = 0;
+            FillMachineRegister();
         }
 
         //Member Methods (Can Do)
@@ -52,10 +56,55 @@ namespace SodaMachineDemo
 
         public double ChangeCalculator()
         {
-           correctChange = (RunningTotal - CostOfDrink) * 0.01;
+           correctChange = (RunningTotal - CostOfDrink) * 0.01;//if using doubles, no need to multiply
             return correctChange;
             
         }
+
+        private void FillMachineRegister()
+        //20 quarters, 10 dimes, 20 nickels, 50 pennies
+        {
+            for (int i = 0; i <= 20; i++)
+            {
+                Quarter quarter = new Quarter();
+                register.Add(quarter);
+                register.Add(new Nickel());
+            }
+            for (int i = 0; i <= 10; i++)
+            {
+                Dime dime = new Dime();
+                register.Add(dime);
+            }
+            for (int i = 0; i <= 50; i++)
+            {
+                Penny penny = new Penny();
+                register.Add(penny);
+            }
+            
+
+        }
+
+        private void FillMachineWithCans()
+            //Cans (you pick how many of each the machine starts with): 
+
+        {
+            for (int i = 0; i <= 4; i++)
+            {
+                Can colaCan = new Cola();
+                inventory.Add(colaCan);
+            }
+            for (int i = 0; i <= 4; i++)
+            {
+                Can rootBeerCan = new RootBeer();
+                inventory.Add(rootBeerCan);
+            }
+            for (int i = 0; i <= 4; i++)
+            {
+                Can orangeSodaCan = new OrangeSoda();
+                inventory.Add(orangeSodaCan);
+            }
+        }
+
     }
 
 
